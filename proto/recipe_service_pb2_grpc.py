@@ -31,15 +31,15 @@ class RecipeServiceServicer(object):
   pass
 
   def GetRecipe(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
+    """Get single recipe by id
+    """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
   def CreateRecipe(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
+    """Create new recipe
+    """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')

@@ -3,7 +3,10 @@ syntax = "proto3";
 package recipe;
 
 service RecipeService {
+  // Get single recipe by id
   rpc GetRecipe(GetRecipeRequest) returns (GetRecipeResponse) {}
+
+  // Create new recipe
   rpc CreateRecipe(CreateRecipeRequest) returns (CreateRecipeResponse) {}
   
 }
@@ -25,6 +28,77 @@ message CreateRecipeResponse {
 
 message Recipe {
   string id = 1;
+
   string name = 2;
+
   string description = 3;
+}
+
+message Step {
+  string id = 1;
+
+  // The id of recipe this step belongs to
+  string recipe_id = 2;
+
+  // Pre-requisite of this step
+  repeated string previous_step_ids = 3;
+
+  enum StepType {
+    UNKNOWN = 0;
+    GET_INGREDIENTS = 1;
+    COOK_IT = 2;
+  }
+
+  StepType type = 4;
+
+  oneof detail {
+    GetIngredients get_ingredients = 10;
+    CookIt cook_it = 11;
+  }
+}
+
+message GetIngredients {
+  Ingredients ingredients = 1;
+
+  double serving_count = 2;
+}
+
+message Ingredients {
+  enum IngredientsType {
+    UNKNOWN = 0;
+    RICE = 1;
+  }
+
+  IngredientsType type = 1;
+
+  string description = 2;
+
+  // 600 = 6.00 dollar
+  int64 price = 3;
+
+  int64 calorie = 4;
+
+  oneof serving_base {
+    int64 kilogram = 20;
+    int64 milliliter = 21;
+  }
+
+  repeated string picture_urls = 10;
+}
+
+message CookIt {
+  CookMethod cook_method = 1;
+
+  int64 seconds = 2;
+}
+
+message CookMethod{
+  enum CookMethodType {
+    UNKNOWN = 0;
+    STEAM = 1;
+    FRY = 2;
+    ROAST = 3;
+  }
+
+  CookMethodType type = 1;
 }
