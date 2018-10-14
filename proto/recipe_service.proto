@@ -32,6 +32,8 @@ message Recipe {
   string name = 2;
 
   string description = 3;
+
+  repeated Step steps = 10;
 }
 
 message Step {
@@ -58,18 +60,20 @@ message Step {
 }
 
 message GetIngredients {
-  Ingredients ingredients = 1;
+  Ingredients.IngredientsType ingredients_type = 1;
 
   double serving_count = 2;
 }
 
 message Ingredients {
   enum IngredientsType {
-    UNKNOWN = 0;
+    UNKNOWN_INGREDIENTS = 0;
     RICE = 1;
+    OIL = 2;
   }
 
-  IngredientsType type = 1;
+  // Primary key of ingredients
+  IngredientsType ingredients_type = 1;
 
   string description = 2;
 
@@ -87,18 +91,19 @@ message Ingredients {
 }
 
 message CookIt {
-  CookMethod cook_method = 1;
+  CookMethod.CookMethodType cook_method_type = 1;
 
   int64 seconds = 2;
 }
 
 message CookMethod{
   enum CookMethodType {
-    UNKNOWN = 0;
+    UNKNOWN_COOK_METHOD = 0;
     STEAM = 1;
     FRY = 2;
     ROAST = 3;
   }
 
-  CookMethodType type = 1;
+  // primary key of cook method
+  CookMethodType cook_method_type = 1;
 }
