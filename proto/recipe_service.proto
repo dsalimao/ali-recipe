@@ -60,6 +60,7 @@ message Step {
 }
 
 message GetIngredients {
+
   Ingredients.IngredientsType ingredients_type = 1;
 
   double serving_count = 2;
