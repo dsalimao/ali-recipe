@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='recipe',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x14recipe_service.proto\x12\x06recipe\"\x1e\n\x10GetRecipeRequest\x12\n\n\x02id\x18\x01 \x01(\t\"3\n\x11GetRecipeResponse\x12\x1e\n\x06recipe\x18\x01 \x01(\x0b\x32\x0e.recipe.Recipe\"5\n\x13\x43reateRecipeRequest\x12\x1e\n\x06recipe\x18\x01 \x01(\x0b\x32\x0e.recipe.Recipe\"\x16\n\x14\x43reateRecipeResponse\"T\n\x06Recipe\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x1b\n\x05steps\x18\n \x03(\x0b\x32\x0c.recipe.Step\"\x80\x02\n\x04Step\x12\n\n\x02id\x18\x01 \x01(\t\x12\x11\n\trecipe_id\x18\x02 \x01(\t\x12\x19\n\x11previous_step_ids\x18\x03 \x03(\t\x12#\n\x04type\x18\x04 \x01(\x0e\x32\x15.recipe.Step.StepType\x12\x31\n\x0fget_ingredients\x18\n \x01(\x0b\x32\x16.recipe.GetIngredientsH\x00\x12!\n\x07\x63ook_it\x18\x0b \x01(\x0b\x32\x0e.recipe.CookItH\x00\"9\n\x08StepType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x13\n\x0fGET_INGREDIENTS\x10\x01\x12\x0b\n\x07\x43OOK_IT\x10\x02\x42\x08\n\x06\x64\x65tail\"f\n\x0eGetIngredients\x12=\n\x10ingredients_type\x18\x01 \x01(\x0e\x32#.recipe.Ingredients.IngredientsType\x12\x15\n\rserving_count\x18\x02 \x01(\x01\"\x90\x02\n\x0bIngredients\x12=\n\x10ingredients_type\x18\x01 \x01(\x0e\x32#.recipe.Ingredients.IngredientsType\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\r\n\x05price\x18\x03 \x01(\x03\x12\x0f\n\x07\x63\x61lorie\x18\x04 \x01(\x03\x12\x12\n\x08kilogram\x18\x14 \x01(\x03H\x00\x12\x14\n\nmilliliter\x18\x15 \x01(\x03H\x00\x12\x14\n\x0cpicture_urls\x18\n \x03(\t\"=\n\x0fIngredientsType\x12\x17\n\x13UNKNOWN_INGREDIENTS\x10\x00\x12\x08\n\x04RICE\x10\x01\x12\x07\n\x03OIL\x10\x02\x42\x0e\n\x0cserving_base\"V\n\x06\x43ookIt\x12;\n\x10\x63ook_method_type\x18\x01 \x01(\x0e\x32!.recipe.CookMethod.CookMethodType\x12\x0f\n\x07seconds\x18\x02 \x01(\x03\"\x93\x01\n\nCookMethod\x12;\n\x10\x63ook_method_type\x18\x01 \x01(\x0e\x32!.recipe.CookMethod.CookMethodType\"H\n\x0e\x43ookMethodType\x12\x17\n\x13UNKNOWN_COOK_METHOD\x10\x00\x12\t\n\x05STEAM\x10\x01\x12\x07\n\x03\x46RY\x10\x02\x12\t\n\x05ROAST\x10\x03\x32\xa0\x01\n\rRecipeService\x12\x42\n\tGetRecipe\x12\x18.recipe.GetRecipeRequest\x1a\x19.recipe.GetRecipeResponse\"\x00\x12K\n\x0c\x43reateRecipe\x12\x1b.recipe.CreateRecipeRequest\x1a\x1c.recipe.CreateRecipeResponse\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x14recipe_service.proto\x12\x06recipe\"\x1e\n\x10GetRecipeRequest\x12\n\n\x02id\x18\x01 \x01(\t\"3\n\x11GetRecipeResponse\x12\x1e\n\x06recipe\x18\x01 \x01(\x0b\x32\x0e.recipe.Recipe\"5\n\x13\x43reateRecipeRequest\x12\x1e\n\x06recipe\x18\x01 \x01(\x0b\x32\x0e.recipe.Recipe\"\x16\n\x14\x43reateRecipeResponse\"T\n\x06Recipe\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x1b\n\x05steps\x18\n \x03(\x0b\x32\x0c.recipe.Step\"\x80\x02\n\x04Step\x12\n\n\x02id\x18\x01 \x01(\t\x12\x11\n\trecipe_id\x18\x02 \x01(\t\x12\x19\n\x11previous_step_ids\x18\x03 \x03(\t\x12#\n\x04type\x18\x04 \x01(\x0e\x32\x15.recipe.Step.StepType\x12\x31\n\x0fget_ingredients\x18\n \x01(\x0b\x32\x16.recipe.GetIngredientsH\x00\x12!\n\x07\x63ook_it\x18\x0b \x01(\x0b\x32\x0e.recipe.CookItH\x00\"9\n\x08StepType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x13\n\x0fGET_INGREDIENTS\x10\x01\x12\x0b\n\x07\x43OOK_IT\x10\x02\x42\x08\n\x06\x64\x65tail\"f\n\x0eGetIngredients\x12=\n\x10ingredients_type\x18\x01 \x01(\x0e\x32#.recipe.Ingredients.IngredientsType\x12\x15\n\rserving_count\x18\x02 \x01(\x01\"\x90\x02\n\x0bIngredients\x12=\n\x10ingredients_type\x18\x01 \x01(\x0e\x32#.recipe.Ingredients.IngredientsType\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\r\n\x05price\x18\x03 \x01(\x03\x12\x0f\n\x07\x63\x61lorie\x18\x04 \x01(\x03\x12\x12\n\x08kilogram\x18\x14 \x01(\x03H\x00\x12\x14\n\nmilliliter\x18\x15 \x01(\x03H\x00\x12\x14\n\x0cpicture_urls\x18\n \x03(\t\"=\n\x0fIngredientsType\x12\x17\n\x13UNKNOWN_INGREDIENTS\x10\x00\x12\x08\n\x04RICE\x10\x01\x12\x07\n\x03OIL\x10\x02\x42\x0e\n\x0cserving_base\"V\n\x06\x43ookIt\x12;\n\x10\x63ook_method_type\x18\x01 \x01(\x0e\x32!.recipe.CookMethod.CookMethodType\x12\x0f\n\x07seconds\x18\x02 \x01(\x03\"\xa7\x01\n\nCookMethod\x12;\n\x10\x63ook_method_type\x18\x01 \x01(\x0e\x32!.recipe.CookMethod.CookMethodType\x12\x12\n\nis_waiting\x18\x02 \x01(\x08\"H\n\x0e\x43ookMethodType\x12\x17\n\x13UNKNOWN_COOK_METHOD\x10\x00\x12\t\n\x05STEAM\x10\x01\x12\x07\n\x03\x46RY\x10\x02\x12\t\n\x05ROAST\x10\x03\x32\xa0\x01\n\rRecipeService\x12\x42\n\tGetRecipe\x12\x18.recipe.GetRecipeRequest\x1a\x19.recipe.GetRecipeResponse\"\x00\x12K\n\x0c\x43reateRecipe\x12\x1b.recipe.CreateRecipeRequest\x1a\x1c.recipe.CreateRecipeResponse\"\x00\x62\x06proto3')
 )
 
 
@@ -101,8 +101,8 @@ _COOKMETHOD_COOKMETHODTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1084,
-  serialized_end=1156,
+  serialized_start=1104,
+  serialized_end=1176,
 )
 _sym_db.RegisterEnumDescriptor(_COOKMETHOD_COOKMETHODTYPE)
 
@@ -513,6 +513,13 @@ _COOKMETHOD = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='is_waiting', full_name='recipe.CookMethod.is_waiting', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -527,7 +534,7 @@ _COOKMETHOD = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1009,
-  serialized_end=1156,
+  serialized_end=1176,
 )
 
 _GETRECIPERESPONSE.fields_by_name['recipe'].message_type = _RECIPE
@@ -645,8 +652,8 @@ _RECIPESERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1159,
-  serialized_end=1319,
+  serialized_start=1179,
+  serialized_end=1339,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetRecipe',

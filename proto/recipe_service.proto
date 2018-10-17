@@ -107,4 +107,7 @@ message CookMethod{
 
   // primary key of cook method
   CookMethodType cook_method_type = 1;
+
+  // Can wait aside, no need to spend time on it.
+  bool is_waiting = 2;
 }
